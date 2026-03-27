@@ -105,7 +105,7 @@ a.active::after{
     letter-spacing: 1.1px;
     font-weight: 600;
     margin: 1rem;
-    transition:background-color: 0.3s ease, trasform 0.2s ease;
+    transition:background-color 0.3s ease, trasform 0.2s ease;
 }
 .hero a:hover{
     background-color: var(--violet-fonce);
@@ -123,6 +123,7 @@ section h2{
     font-weight: 700;
     position: relative;
     text-align: center;
+    text-transform: capitalize;
 }
 section h2::after{
     content: '';
@@ -133,42 +134,60 @@ section h2::after{
     margin: 1.2rem auto;
     border-radius: 2px;
 }
-.apropos p{
+.apropos p {
     margin-bottom: 2rem;
     color: var(--gris-tres-fonce);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
-table {
+.competences table {
   width: 80%;
-  margin: 10px;
-  border-radius: 10px;
+  margin: 0 auto;
+  border-collapse: collapse;
   background-color: white;
-   box-shadow: 2px 6px 10px rgba(0,0,0,0.05);
-   top: 0; 
-   display: block;
-   align-items: center;
-   padding: 1rem 2rem;
-   margin-bottom: 10%;
-   align-self: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-table thead {
+.competences table th, .competences table td {
+   padding: 15px;
+   text-align: left;
+}
+.competences table thead {
    
   background-color: var(--violet-doux);
-  padding: 0.8em;
   color: white;
-  box-sizing: content-box;
-  text-align: center; 
+  text-transform: uppercase;
+}
+.competences tbody td {
+    border-bottom: 1px solid var(--gris-clair);
+}
+.competences table tbody td :nth-child(even){
+    background-color: #fdfdfd;
+}
+.competences table tbody tr {
+    transition: background-color 0.3s ease;
+}
+.competences table tbody tr :hover {
+    background-color: #f0f0f0;
 }
 footer {
-  background: var(--violet-doux);
-  color: white;
-  text-align: center;
-  padding: 1.5em;
+    margin-top: 3rem;
+    background: var(--violet-doux);
+    padding: 3rem 0;
+    text-align: center;
 }
-
-footer div a {
-  margin: 0 1em;
-  color:white;
-  text-decoration: none;
+footer p{
+    color: white;
+    margin-bottom: 1.2rem;
+}
+footer a {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin: 0 10px;
+    color:white;
+    transform: color 0.3s ease, trasform 0.2s ease;
+}
+footer a::after{
+    color: var(--orange-vif);
+    transform: translateY();
 }
