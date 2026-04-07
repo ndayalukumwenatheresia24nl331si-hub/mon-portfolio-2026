@@ -191,3 +191,30 @@ footer a::after{
     color: var(--orange-vif);
     transform: translateY();
 }
+*.projets h1{
+   color: var(--violet-doux);
+}
+.projets h1{
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+}
+.projets h1::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 60px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+.projets section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 4rem 2rem;
+}
